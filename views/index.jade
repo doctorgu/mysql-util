@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div#url
+  div#input
+  pre#description
+  div#convert
+    a(href="javascript:toJson()") JSON
+    a(href="javascript:toTsv()") TSV (Tab separated value)
+  textarea#result=result
+  textarea#query=query
+  input#result_hidden(type="hidden", value=result)
+  input#type_hidden(type="hidden", value=type)
+  input#information_hidden(type="hidden", value=information)

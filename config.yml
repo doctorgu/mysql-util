@@ -1,0 +1,20 @@
+dbOption:
+  multipleStatements: false
+
+dbConnection:
+  local_monitoring:
+    host: localhost
+    port: 3306
+    user: root
+    password: root
+    database: monitoring
+
+sshOption:
+  readyTimeout: 30 * 1000
+
+sshConnection:
+  noserver:
+    host: noserver
+    username: root
+    port: 22
+    password: root

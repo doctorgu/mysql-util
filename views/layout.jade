@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.col-1
+      ul
+        li
+          a(href="/report") Report
+        li
+          a(href="/schema") Schema
+        li
+          a(href="/util") Util
+    div.col-2
+      block content
+
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js")
+    script(src="/scripts/common.js")
+    

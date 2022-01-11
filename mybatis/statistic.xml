@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="statistic">  
+  <select id="selectIndexSize">
+    SELECT  database_name, table_name, index_name,
+            ROUND(stat_value * @@innodb_page_size / 1024 / 1024, 2) size_in_mb
+    FROM    mysql.innodb_index_stats
+    WHERE   stat_name = 'size' /*AND index_name != 'PRIMARY'*/
+    ORDER BY size_in_mb DESC;
+  </select>
+</mapper>
